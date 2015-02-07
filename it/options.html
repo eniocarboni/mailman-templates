@@ -1,0 +1,256 @@
+<!DOCTYPE html> 
+<!-- $Revision: 5688 $ -->
+<html lang="it">
+<head>
+	<link rel="SHORTCUT ICON" href="<mm-favicon>">
+	<title>Configurazione utente <MM-Presentable-User> per la lista <MM-List-Name> - Quoll Tech</title>
+    <link rel='stylesheet' id='quolltech-lato-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+    <link rel='stylesheet' id='quoll_style' href='/images/mailman/style.css?ver=0.1' type='text/css' media='all' />
+</head>
+<body>
+  <p>
+  <div id="page" class="container">
+    <div id="content">
+      <div id="onecolumn">
+        <h1>Lista <MM-List-Name>: connesso come <MM-Presentable-User> <MM-Form-Start><mm-logout-button><MM-Form-End></h1>
+          <br />
+	  <p><MM-Case-Preserved-User></p>
+	  <p><MM-Disabled-Notice></p>
+          <p><mm-results></p>
+      </div>
+      <div id="two-column">
+	<MM-Form-Start>
+        <div class="box-content" id="personal_info">
+		<h3 class="title title05">Modifica la tua iscrizione</h3>
+		<p>Puoi cambiare l'indirizzo con il quale sei
+		iscritto alla lista, semplicemente inserendo il nuovo
+		indirizzo nel campo sottostante.  Nota che ti verr&agrave;
+		inviato, al nuovo indirizzo, un messaggio con la richiesta di 
+		conferma.  La variazione sar&agrave; completata solo dopo il
+		ricevimento della tua risposta.</p>
+	
+		<p>Le richieste di conferma scadono dopo circa <mm-pending-days>.</p>
+	
+		<p>Puoi anche opzionalmente inserire o cambiare il tuo vero
+		nome (ad esempio <em>Mario Rossi</em>).</p>
+	
+		<p>Se vuoi che le tue variazioni abbiano effetto su tutte le
+		liste alle quali sei iscritto su <mm-host>, metti la spunta
+		nel quadratino <em>Cambia globalmente</em>.</p>
+		<table align="center">
+			<tr><td>Nuovo indirizzo</td><td><mm-new-address-box></td></tr> 
+			<tr><td>Di nuovo perconferma</td><td><mm-confirm-address-box></td></tr>
+			<tr><td>Il tuo nome (opzionale)</td><td><mm-fullname-box></td></tr>
+			<tr><td>Cambia globalmente</td><td><mm-global-change-of-address></td></tr>
+			<tr><td colspan="2"><mm-change-address-button></td></tr>
+		</table>
+        </div>
+	<div class="box-content" id="delete">
+		<h3 class="title title06">Cancella la tua iscrizione a <MM-List-Name></h3>
+		<p>Metti la spunta nel quadratino di conferma e clicca questo
+		pulsante per cancellarti da questa mailing list.
+		<strong>Attenzione:</strong> L'azione avr&agrave; effetto
+		immediato!</p>
+	        <p style="text-align:center"><MM-Unsubscribe-Button></p>
+	</div>
+	<div class="box-content" id="other_subscriptions">
+		<h3 class="title title07">Le altre tue iscrizioni su <MM-Host></h3>
+	    	<p>Puoi vedere un elenco delle altre mailing list alle quali sei
+		iscritto su questo stesso server <mm-host>.  Usa questo se vuoi
+		che le modifiche che stai apportando abbiano effetto su tutte
+		le altre iscrizioni.</p>
+	        <p style="text-align:center"><MM-Other-Subscriptions-Submit></p>
+	</div>
+	<div class="box-content" id="send_password">
+		<h3 class="title title08">La tua password per <MM-List-Name></h3>
+		<a name="reminder"></a>
+		<p>Clicca questo pulsante se vuoi che la tua password ti
+		sia spedita al tuo indirizzo.</p>
+	        <p style="text-align:center"><MM-Umbrella-Notice></p>
+	        <p style="text-align:center"><MM-Email-My-Pw></p>
+	</div>
+	<div class="box-content" id="change_password">
+		<h3 class="title title08">Cambia la password</h3>
+		<a name="changepw"></a>
+		<table align="center">
+			<tr><td>Nuova password</td><td><MM-New-Pass-Box></td></tr>
+			<tr><td>Conferma password</td><td><MM-Confirm-Pass-Box></td></tr>
+			<tr><td>Cambia globalmente</td><td><mm-global-pw-changes-button></td></tr>
+			<tr><td colspan="2"><MM-Change-Pass-Button></td></tr>
+		</table>
+	</div>
+	<div class="box-content" id="options">
+		<h3 class="title title03">Le tue opzioni per la lista <MM-List-Name></h3>
+		<p><i><strong>I valori attualmente scelti sono spuntati.</strong></i></p>
+		<p>Nota che alcune di queste opzioni hanno un quadratino
+		<em>Globalmente</em>.  Spuntando questo quadratino le tue variazioni
+		avranno effetto su tutte le liste a cui sei iscritto su questo
+		stesso server <mm-host>.  Clicca su <em>Elenca le altre mie iscrizioni</em>
+		qui sopra per vedere a quali altre liste sei iscritto.</p>
+		<div class="sub-box-content" id="options_01">
+			<a name="disable"></a>
+			<h3 class="mini_title">Consegna della posta</h3>
+			<p><em>Abilita</em> questa opzione per ricevere i messaggi che 
+			sono inviati a questa lista.  <em>Disabilitala</em> se non vuoi 
+			ricevere i messaggi per qualche tempo (ad esempio se stai andando 
+			in vacanza).  Se disabiliti l'invio, non dimenticare che dopo
+			le vacanze dovrai tornare qui e riabilitarlo; non sar&agrave;
+			riabilitato automaticamente.</p>
+			<div class="options">
+			<mm-delivery-enable-button>Abilitato
+			<mm-delivery-disable-button>Disabilitato
+			<mm-global-deliver-button><i>Globalmente</i>
+			</div>
+		</div>
+		<div class="sub-box-content" id="options_02">
+			<h3 class="mini_title">Modo Digest</h3><p>
+			Se abiliti il modo digest, riceverai i messaggi in un unico
+			pacchetto giornaliero (normalmente ne viene inviato uno al
+			giorno ma potrebbero essere pi&ugrave; frequenti su liste
+			particolarmente trafficate) invece di uno per volta.  Se era
+			abilitato e lo stai disabilitando, potresti ricevere ancora un
+			ultimo digest prima che le cose vadano a regime.
+		        </p>
+			<div class="options">
+		        <MM-Undigest-Radio-Button>Off
+		        <MM-Digest-Radio-Button>On
+			</div>
+		</div>
+		<div class="sub-box-content" id="options_03">
+			<h3 class="mini_title">Digest in formato MIME o Testo?</h3><p>
+			Il tuo programma di posta potrebbe supportare i digest in
+			formato MIME oppure no.  In generale il formato MIME &egrave;
+			preferibile ma se hai problemi scegli il formato testo.
+		        </p>
+			<div class="options">
+		        <MM-Mime-Digests-Button>MIME
+			<MM-Plain-Digests-Button>Testo
+			<mm-global-mime-button><i>Globalmente</i>
+			</div>
+		</div>
+		<div class="sub-box-content" id="options_04">
+			<h3 class="mini_title">Vuoi ricevere una copia dei messaggi che mandi alla lista?</h3><p>
+			Normalmente, riceverai una copia di ogni messaggio che
+			manderai alla lista.  Se non vuoi che questo succeda, metti
+			questa opzione a <em>No</em>.
+		        </p>
+			<div class="options">
+		        <mm-dont-receive-own-mail-button>No
+			<mm-receive-own-mail-button>S&igrave;
+			</div>
+		</div>
+		<div class="sub-box-content" id="options_05">
+			<h3 class="mini_title">Vuoi ricevere un messaggio di conferma quando mandi una mail alla lista?</h3><p>
+		        </p>
+			<div class="options">
+		        <mm-dont-ack-posts-button>No
+			<mm-ack-posts-button>S&igrave;
+			</div>
+		</div>
+		<div class="sub-box-content" id="options_06">
+		    	<h3 class="mini_title">Vuoi ricevere un promemoria contente la password per questa lista?</h3><p>
+			Una volta al mese riceverai un messaggio contenente un
+			promemoria per ogni lista a cui sei iscritto su questo server.
+			Puoi disabilitare questa opzione lista per lista, scegliendo
+			<em>No</em>.  Se scegli di disabilitarla globalmente, allora
+			non riceverai alcun promemoria mensile.
+		        </p>
+			<div class="options">
+		        <mm-dont-get-password-reminder-button>No
+			<mm-get-password-reminder-button>S&igrave;
+			<mm-global-remind-button><i>Globalmente</i>
+			</div>
+		</div>
+		<div class="sub-box-content" id="options_07">
+			<h3 class="mini_title">Vuoi rimanere nascosto nell'elenco degli iscritti?</h3><p>
+			Quando qualcuno consulta l'elenco degli iscritti alla lista,
+			il tuo indirizzo di posta viene normalmente mostrato (in un
+			modo alterato, cos&igrave; da rendere difficile il lavoro
+			degli spammer).  Se vuoi che il tuo indirizzo non compaia
+			in questi elenchi, scegli <em>S&igrave;</em> in questa opzione.
+		        </p>
+			<div class="options">
+		        <MM-Public-Subscription-Button>No
+			<MM-Hide-Subscription-Button>S&igrave;
+			</div>
+		</div>
+		<div class="sub-box-content" id="options_08">
+			<h3 class="mini_title">Che lingua preferisci?</h3><p>
+		        </p>
+			<div class="options">
+		        <MM-list-langs>
+			</div>
+		</div>
+		<div class="sub-box-content" id="options_09">
+		        <h3 class="mini_title">A quali categorie di argomenti sei interessato?</h3><p>
+			Selezionando uno o pi&ugrave; argomenti puoi filtrare il
+			traffico della lista e ricevere soltanto un sottoinsieme
+			dei messaggi.  Se un messaggio corrisponde ad uno degli
+			argomenti che hai scelto allora lo riceverai, altrimenti no.</p>
+		
+		        <p>Se un messaggio non corrisponde a nessun argomento, allora
+			la scelta dipende dalla prossima opzione.  Se non scegli
+			nessun argomento di interesse allora riceverai tutti i
+			messaggi che saranno inviati alla lista.
+		        </p>
+			<div class="options">
+		        <mm-topics>
+			</div>
+		</div>
+		<div class="sub-box-content" id="options_10">
+		    <h3 class="mini_title">Vuoi ricevere i messaggi che non corrispondono a nessuna categoria?</h3><p>
+			Normalmente questa opzione ha effetto soltanto se ti sei iscritto 
+			ad almeno una categoria di interesse tra quelle sopra elencate.
+			Quello che devi decidere &egrave; se i messaggi che non
+			corrispondono a nessuna categoria li vuoi ricevere o no.</p>
+			<p>Se nella precedente opzione non hai scelto alcuna categoria
+			di interesse, allora riceverai tutti i messaggi inviati alla
+			lista.
+		        </p>
+			<div class="options">
+		        <mm-suppress-nonmatching-topics>No
+			<mm-receive-nonmatching-topics>S&igrave;
+			</div>
+		</div>  
+		<div class="sub-box-content" id="options_11">
+		        <h3 class="mini_title">Elimino i doppioni?</h3><p>
+			Quando sei indicato esplicitamente nel <tt>To:</tt> o
+			nel <tt>Cc:</tt> di un messaggio che era stato inviato
+			aalla lista, puoi scegliere di non ricevere la copia
+			che la lista ti avrebbe inviato.
+			Scegli <em>S&igrave;</em> per evitare di ricevere copie dalla
+			lista; scegli <em>No</em> per riceverle.</p>
+			<p>Se la lista ha i messaggi personalizzati abilitati, 
+			e tu hai deciso di ricevere le copie, ogni copia avr&agrave; una
+			intestazione <tt>X-Mailman-Copy: yes</tt> aggiunta.
+		        </p>
+			<div class="options">
+		        <mm-receive-duplicates-button>No
+		        <mm-dont-receive-duplicates-button>Yes
+		        <mm-global-nodupes-button><i>Globalmente</i>
+			</div>
+		</div>
+		<center><MM-options-Submit-button></center>
+	</div>
+	<MM-Form-End>
+	<p><MM-Mailman-Footer></p>
+     </div>
+  </div>
+  <a href="https://quoll.it"><img src="https://quoll.it/wp-content/uploads/2014/05/logo-white.png" alt="Logo Quoll Tech" class="aligncenter"></a><br />
+    <div id="sidebar">
+      <div id="menu">
+        <ul>
+          <li><a href="https://lists.quoll.it/cgi-bin/mailman/listinfo" >Mailing lists</a></li>
+        </ul>
+      </div>
+      <!-- Optional multilingual selector -->
+      <!-- Mailman needs to be restarted to localize this custom template -->
+      <!-- http://wiki.list.org/pages/viewpage.action?pageId=4030605 -->
+      <MM-lang-form-start><MM-displang-box> <MM-list-langs><MM-form-end>
+    </div>
+  </div>
+  <div id="copyright" class="container">
+    <p>Basato su [[<a href="https://github.com/quimgil/mailman-templates">mailman-templates</a>]]</p>
+  </div>
+</body>
+</html>

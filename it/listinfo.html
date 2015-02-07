@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Version: 1.6 -->
+<html lang="it">
+  <head>
+    <link rel="SHORTCUT ICON" href="<mm-favicon>">
+    <title><MM-List-Name> Mailing List - Quoll Tech</title>
+    <link rel='stylesheet' id='quolltech-lato-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+    <link rel='stylesheet' id='quoll_style' href='/images/mailman/style.css?ver=0.1' type='text/css' media='all' />
+  </head>
+  <body>
+  <p>
+  <div id="page" class="container">
+    <div id="content">
+      <div id="onecolumn">
+        <h1><MM-List-Name> mailing list</h1>
+          <br />
+        <h3><MM-List-Description></h3>
+        <p><MM-List-Info></p>
+        <ul>
+          <li>Visita l'archivio della lista <MM-Archive><MM-List-Name></MM-Archive>. <MM-Restricted-List-Message></li>
+          <li>Spedisci email agli iscritti tramite l'indirizzo <A HREF="mailto:<MM-Posting-Addr>"><MM-Posting-Addr></A>.</li>
+        </ul>
+      </div>
+      <div id="two-column">
+        <div class="box-content" id="subscribe">
+          <h3 class="title title01">Iscriviti</h3>
+          <MM-Subscribe-Form-Start>
+          <table>
+            <tr><td>Il tuo indirizzo e-mail:</td><td><MM-Subscribe-Box></td></tr>
+            <tr><td>Il tuo nome (opzionale):</td><td><mm-fullname-box></td></tr>
+            <!-- Optional Password Fields (can leave out for public lists as Mailman auto-generates) -->
+            <!-- Password reminders can always be requested through web interface -->
+            <!-- Most likely only to be used with lists with private archives or subscription lists -->
+            <!-- <tr><td>Password:</td><td><MM-New-Password-Box></td></tr> -->
+            <!-- <tr><td>Confirm Password:</td><td><MM-Confirm-Password></td></tr> -->
+            <!-- Part of the multilingual selector below -->
+            <tr><td>Lingua preferita:</td><td><MM-list-langs></td></tr>
+          </table>
+          <p><MM-Reminder></p>
+          <p><mm-digest-question-start> Vuoi ricevere i messaggi della mail list raggruppati in un digest giornaliero? 
+          <MM-Undigest-Radio-Button> No <MM-Digest-Radio-Button>  Si <mm-digest-question-end></p>
+          <!-- MM-List-Subscription-Msg gives extra details about the subscription rules of the list -->
+          <!-- This is optional, and will include variations between subscription rules (confirm vs confirm and approve) -->
+          <!-- On the majority of lists this can be commented out as subscription rules will simply be confirm -->
+          <MM-List-Subscription-Msg>
+          <p style="text-align: center"><MM-Subscribe-Button><MM-Form-End></p>
+        </div>
+        <div class="box-content" id="members">
+          <h3 class="title title02">Lista iscritti</h3>
+          <!-- MM-Roster-Form gives easy access to the subscribers list from the main list info page -->
+          <!-- You can comment the line below out for when you don't need to give access to the subscribers list -->
+          <!-- For example for announcement mailing lists or mailing lists with a large number of subscribers  -->
+          <p><MM-Roster-Form-Start><MM-Roster-Option><MM-Form-End></p></div>
+        <div class="box-content" id="manage">
+          <h3 class="title title03">Cambiare le impostazioni o disiscriversi</h3>
+          <p><MM-Options-Form-Start><MM-Editing-Options><MM-Form-End></p>
+        </div>
+        <div class="box-content" id="admins">
+          <h3 class="title title04">Amministratori</h3>
+          <p><MM-Mailman-Footer></p>
+        </div>
+      </div>
+    </div>
+  <a href="https://quoll.it"><img src="https://quoll.it/wp-content/uploads/2014/05/logo-white.png" alt="Logo Quoll Tech" class="aligncenter"></a><br />
+    <div id="sidebar">
+      <div id="menu">
+        <ul>
+          <li><a href="https://lists.quoll.it/cgi-bin/mailman/listinfo" >Mailing lists</a></li>
+        </ul>
+      </div>
+      <!-- Optional multilingual selector -->
+      <!-- Mailman needs to be restarted to localize this custom template -->
+      <!-- http://wiki.list.org/pages/viewpage.action?pageId=4030605 -->
+      <MM-lang-form-start><MM-displang-box> <MM-list-langs><MM-form-end>
+    </div>
+  </div>
+  <div id="copyright" class="container">
+    <p>Basato su [[<a href="https://github.com/quimgil/mailman-templates">mailman-templates</a>]]</p>
+  </div>
+  </body>
+</html>
